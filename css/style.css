@@ -1,9 +1,9 @@
 :root {
-  --page-1-color: tan;
-  --page-2-color: teal;
-  --page-3-color: steelblue;
-  --page-4-color: slateblue;
-  --animate-speed: 1s;
+  --page-1-color: rgb(212, 166, 104);
+  --page-2-color: rgb(13, 143, 143);
+  --page-3-color: rgb(66, 135, 192);
+  --page-4-color: rgb(105, 91, 196);
+  --animate-speed: 1.5s;
 }
 
 body {
@@ -62,4 +62,28 @@ body {
 .btn-dark:hover {
   background: #f4f4f4;
   color: #333;
+}
+
+/* Page Animation */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in; 
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: text var(--animate-speed) forwards ease-in 1s; 
+}
+
+/* Keyframes */
+@keyframes heading {
+  to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes text {
+  to{
+    transform: translateX(0);
+  }
 }
